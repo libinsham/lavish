@@ -179,7 +179,15 @@ export default function Header() {
           </div>
 
           <a href="#" onClick={close}>
-            Academy
+            Membership Plans
+          </a>
+            <a href="#" onClick={close}>
+            Success Stories
+          </a>
+
+          
+            <a href="#" onClick={close}>
+            Gallery
           </a>
 
           <a href="#" onClick={close}>

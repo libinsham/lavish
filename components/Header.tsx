@@ -105,6 +105,43 @@ export default function Header() {
             Home
           </a>
 
+
+
+   <div
+            className={`nav-dropdown ${
+              openDropdown === "about" ? "dropdown-open" : ""
+            }`}
+          >
+            <button
+              type="button"
+              className="nav-dropdown-toggle"
+              aria-expanded={openDropdown === "about"}
+              aria-controls="about-menu"
+              onClick={() => toggleDropdown("about")}
+            >
+              <span>About Us</span>
+              <span className="dropdown-chevron" aria-hidden="true" />
+            </button>
+
+            <div className="dropdown-menu" id="about-menu">
+              <a href="#" onClick={close}>
+                About Us
+              </a>
+
+              <a href="#" onClick={close}>
+                Blog 
+              </a>
+
+                  <a href="#" onClick={close}>
+                Fitness Tips
+              </a>
+
+              <a href="#" onClick={close}>
+                FAQs
+              </a>
+            </div>
+          </div>
+
           {/* OFFERINGS DROPDOWN */}
 
           <div
@@ -127,60 +164,31 @@ export default function Header() {
               className="dropdown-menu"
               id="offerings-menu"
             >
-              <a href="/personal-training" onClick={close}>
+              <a href="#" onClick={close}>
                 Personal Training
               </a>
 
-              <a href="/group-classes" onClick={close}>
+              <a href="#" onClick={close}>
                 Group Classes
               </a>
 
-              <a href="/trainers" onClick={close}>
+              <a href="#" onClick={close}>
                 Trainers / Coaches
               </a>
             </div>
           </div>
 
-          <a href="/academy" onClick={close}>
+          <a href="#" onClick={close}>
             Academy
           </a>
 
-          <a href="/contact" onClick={close}>
+          <a href="#" onClick={close}>
             Contact Us
           </a>
 
           {/* ABOUT US DROPDOWN */}
 
-          <div
-            className={`nav-dropdown ${
-              openDropdown === "about" ? "dropdown-open" : ""
-            }`}
-          >
-            <button
-              type="button"
-              className="nav-dropdown-toggle"
-              aria-expanded={openDropdown === "about"}
-              aria-controls="about-menu"
-              onClick={() => toggleDropdown("about")}
-            >
-              <span>About Us</span>
-              <span className="dropdown-chevron" aria-hidden="true" />
-            </button>
-
-            <div className="dropdown-menu" id="about-menu">
-              <a href="/about" onClick={close}>
-                About Us
-              </a>
-
-              <a href="/blog" onClick={close}>
-                Blog / Fitness Tips
-              </a>
-
-              <a href="/faqs" onClick={close}>
-                FAQs
-              </a>
-            </div>
-          </div>
+       
 
           {/* GET STARTED */}
 

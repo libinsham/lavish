@@ -1,0 +1,661 @@
+/* ==========================================
+   LAVI'SH PERFORMANCE — CONTACT PAGE
+   Laptop: 1280px
+   Large desktop: 1320px
+========================================== */
+
+.contactPage {
+  --lime: #a4c400;
+  --lime-bright: #d7ff00;
+  --ink: #080808;
+  --muted: #686868;
+  --border: #e6e6e6;
+
+  width: 100%;
+  min-width: 0;
+  padding: 72px 0 80px;
+  overflow: hidden;
+  background: #fff;
+  color: var(--ink);
+  box-sizing: border-box;
+}
+
+.contactPage *,
+.contactPage *::before,
+.contactPage *::after {
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   SHARED CONTAINER
+========================================== */
+
+.container {
+  width: calc(100% - 64px);
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+/* ==========================================
+   HERO — SPACED BELOW HEADER
+========================================== */
+
+.hero {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0;
+
+  background: linear-gradient(
+    115deg,
+    #b1cc1d 0%,
+    #96b400 48%,
+    #718b00 100%
+  );
+
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  font-size: clamp(88px, 10.5vw, 148px);
+  font-weight: 850;
+  line-height: 0.82;
+  letter-spacing: -0.085em;
+}
+
+.title span {
+  display: block;
+}
+
+.title span + span {
+  margin-top: 8px;
+  margin-left: 90px;
+}
+
+.heroDescription {
+  max-width: 590px;
+  margin: 28px auto 0;
+
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   CONTACT SECTION
+   Explicit gap below the hero prevents overlap
+========================================== */
+
+.contactSection {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: start;
+  gap: clamp(30px, 5vw, 76px);
+
+  width: 100%;
+  margin-top: clamp(75px, 8vw, 110px);
+  padding: clamp(28px, 4vw, 48px);
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* Contact introduction */
+
+.formHeading {
+  max-width: 430px;
+  padding-top: 8px;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 18px;
+
+  color: var(--lime);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.formHeading h2 {
+  margin: 0 0 16px;
+
+  color: var(--ink);
+  font-size: clamp(31px, 3.5vw, 46px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -1.8px;
+}
+
+.formHeading p {
+  margin: 0;
+
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   FORM GRID
+========================================== */
+
+.contactForm {
+  width: 100%;
+  min-width: 0;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 18px;
+
+  width: 100%;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  min-width: 0;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+/* Labels */
+
+.field label {
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.field label span {
+  color: #898989;
+  font-weight: 400;
+}
+
+/* Inputs, select, textarea */
+
+.field input,
+.field select,
+.field textarea {
+  display: block;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 13px 14px;
+
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  outline: none;
+
+  background: #fff;
+  color: var(--ink);
+
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    background-color 200ms ease;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #969696;
+  opacity: 1;
+}
+
+.field select {
+  cursor: pointer;
+}
+
+.field textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.field input:hover,
+.field select:hover,
+.field textarea:hover {
+  border-color: #b8c775;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--lime);
+  box-shadow: 0 0 0 3px rgb(164 196 0 / 13%);
+}
+
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible {
+  outline: 1px solid var(--lime);
+  outline-offset: 2px;
+}
+
+/* ==========================================
+   FORM SUBMIT
+========================================== */
+
+.formActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+
+  margin-top: 24px;
+}
+
+.submitButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 23px;
+
+  min-height: 48px;
+  padding: 5px 6px 5px 20px;
+
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+
+  background: var(--ink);
+  color: #fff;
+
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    color 250ms ease,
+    background-color 250ms ease,
+    border-color 250ms ease,
+    transform 250ms ease;
+}
+
+.buttonArrow {
+  display: grid;
+  place-items: center;
+
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+
+  border-radius: 50%;
+  background: var(--lime);
+  color: var(--ink);
+
+  font-size: 19px;
+
+  transition: transform 250ms ease;
+}
+
+.submitButton:hover {
+  border-color: var(--lime);
+  background: var(--lime);
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.submitButton:hover .buttonArrow {
+  transform: rotate(45deg);
+  background: #fff;
+}
+
+.submitButton:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 4px;
+}
+
+.formNote {
+  margin: 0;
+  color: #858585;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.formNotice {
+  margin: 18px 0 0;
+  padding: 12px 14px;
+
+  border-left: 3px solid var(--lime);
+  background: #f8fbe9;
+  color: #343a22;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   COMMUNITY CARD
+========================================== */
+
+.community {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  width: 100%;
+  margin-top: 42px;
+  padding: 25px 30px;
+
+  border: 1px solid var(--border);
+  border-radius: 7px;
+
+  background: #fff;
+
+  transition:
+    border-color 250ms ease,
+    box-shadow 250ms ease,
+    transform 250ms ease;
+}
+
+.community:hover {
+  border-color: #c9d98c;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 4%);
+  transform: translateY(-2px);
+}
+
+.communityEyebrow {
+  display: block;
+  margin-bottom: 8px;
+
+  color: #777;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.community h2 {
+  margin: 0 0 9px;
+
+  color: var(--lime);
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.community p {
+  max-width: 690px;
+  margin: 0;
+
+  color: #333;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.communityLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  flex-shrink: 0;
+  padding: 12px 17px;
+
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+
+  background: var(--ink);
+  color: #fff;
+
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition:
+    color 250ms ease,
+    background-color 250ms ease,
+    border-color 250ms ease;
+}
+
+.communityLink span {
+  font-size: 17px;
+}
+
+.communityLink:hover {
+  border-color: var(--lime);
+  background: var(--lime);
+  color: var(--ink);
+}
+
+/* ==========================================
+   LARGE DESKTOP — 1320px
+========================================== */
+
+@media (min-width: 1440px) {
+  .container {
+    width: calc(100% - 80px);
+    max-width: 1320px;
+  }
+
+  .contactPage {
+    padding-top: 82px;
+    padding-bottom: 90px;
+  }
+
+  .title {
+    font-size: clamp(125px, 10vw, 158px);
+  }
+
+  .contactSection {
+    margin-top: 115px;
+    padding: 48px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+  .container {
+    width: calc(100% - 48px);
+  }
+
+  .contactPage {
+    padding-top: 62px;
+  }
+
+  .title {
+    font-size: clamp(82px, 12vw, 115px);
+  }
+
+  .title span + span {
+    margin-left: 60px;
+  }
+
+  .heroDescription {
+    max-width: 540px;
+    font-size: 14px;
+  }
+
+  .contactSection {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    margin-top: 75px;
+    padding: 30px;
+  }
+
+  .formHeading {
+    max-width: 580px;
+  }
+
+  .formHeading h2 {
+    font-size: 38px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 650px) {
+  .contactPage {
+    padding: 104px 0 48px;
+  }
+
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  .title {
+    font-size: clamp(68px, 15vw, 100px);
+    line-height: 0.84;
+    letter-spacing: -0.08em;
+  }
+
+  .title span + span {
+    margin-top: 8px;
+    margin-left: 42px;
+  }
+
+  .heroDescription {
+    max-width: 410px;
+    margin-top: 24px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  /* Keep an obvious gap below the title */
+
+  .contactSection {
+    gap: 27px;
+    margin-top: 56px;
+    padding: 22px 17px;
+    border-radius: 6px;
+  }
+
+  .formHeading h2 {
+    font-size: clamp(29px, 8vw, 38px);
+    letter-spacing: -1px;
+  }
+
+  .formHeading p {
+    font-size: 13px;
+  }
+
+  .formGrid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 17px;
+  }
+
+  .fullWidth {
+    grid-column: auto;
+  }
+
+  .field input,
+  .field select,
+  .field textarea {
+    min-height: 47px;
+    font-size: 13px;
+  }
+
+  .field textarea {
+    min-height: 125px;
+  }
+
+  .formActions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .submitButton {
+    min-height: 46px;
+  }
+
+  .community {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+
+    margin-top: 25px;
+    padding: 21px 18px;
+  }
+
+  .community h2 {
+    font-size: 21px;
+  }
+
+  .community p {
+    font-size: 13px;
+  }
+}
+
+/* ==========================================
+   SMALL PHONES
+========================================== */
+
+@media (max-width: 380px) {
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  .title {
+    font-size: 63px;
+  }
+
+  .title span + span {
+    margin-left: 35px;
+  }
+
+  .contactSection {
+    margin-top: 48px;
+    padding: 18px 13px;
+  }
+
+  .formHeading h2 {
+    font-size: 29px;
+  }
+
+  .community {
+    padding: 18px 14px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .community,
+  .communityLink,
+  .submitButton,
+  .buttonArrow {
+    transition: none;
+  }
+
+  .community:hover,
+  .submitButton:hover {
+    transform: none;
+  }
+}

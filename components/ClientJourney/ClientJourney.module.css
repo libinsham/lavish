@@ -1,0 +1,588 @@
+/* ==========================================
+   LAVI'SH PERFORMANCE
+   CLIENT JOURNEY — SQUARE IMAGE CARDS
+   Max container: 1280px
+========================================== */
+
+.section {
+  --lime: #d7ff00;
+  --lime-soft: #efff78;
+  --white: #f7f7f7;
+  --muted: #bdbdbd;
+
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  padding: 64px 0 38px;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 45%,
+      rgb(215 255 0 / 4%),
+      transparent 65%
+    ),
+    #050505;
+
+  color: var(--white);
+}
+
+.section *,
+.section *::before,
+.section *::after {
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container {
+  width: min(1280px, calc(100% - 48px));
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+/* ==========================================
+   EYEBROW
+========================================== */
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+
+  margin-bottom: 16px;
+
+  color: #f5f5f5;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.dot {
+  flex: 0 0 8px;
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background: var(--lime);
+
+  box-shadow: 0 0 12px rgb(215 255 0 / 60%);
+}
+
+.eyebrowLine {
+  width: 44px;
+  height: 1px;
+  background: #505050;
+}
+
+/* ==========================================
+   HEADING
+========================================== */
+
+.header {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto 46px;
+
+  text-align: center;
+}
+
+.header h2 {
+  margin: 0 0 16px;
+
+  color: #fff;
+  font-size: clamp(36px, 5vw, 66px);
+  font-weight: 850;
+  line-height: 1.05;
+  letter-spacing: -2.5px;
+  text-transform: uppercase;
+}
+
+.header h2 span {
+  color: var(--lime);
+}
+
+.header p {
+  max-width: 760px;
+  margin: 0 auto;
+
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* ==========================================
+   5 COLUMNS × 2 ROWS
+========================================== */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+
+  width: 100%;
+  align-items: stretch;
+}
+
+/* ==========================================
+   SQUARE CARD
+========================================== */
+
+.card {
+  --card-image: none;
+
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 1 / 1;
+
+  padding: 22px;
+  overflow: hidden;
+
+  border: 1px solid rgb(215 255 0 / 38%);
+  border-radius: 20px;
+
+  background:
+    radial-gradient(
+      circle at 50% 25%,
+      #222 0%,
+      #141414 56%,
+      #090909 100%
+    );
+
+  text-align: center;
+
+  box-shadow:
+    0 0 14px rgb(215 255 0 / 3%),
+    inset 0 0 30px rgb(255 255 255 / 1%);
+
+  transition:
+    border-color 350ms ease,
+    box-shadow 350ms ease,
+    transform 350ms ease,
+    background-color 350ms ease;
+}
+
+/* Image layer: visible only on hover */
+
+.card::before {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      180deg,
+      rgb(0 0 0 / 62%) 0%,
+      rgb(0 0 0 / 84%) 100%
+    ),
+    var(--card-image);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  opacity: 0;
+  transform: scale(1.08);
+
+  transition:
+    opacity 450ms ease,
+    transform 700ms ease;
+
+  content: "";
+  pointer-events: none;
+}
+
+/* Additional dark overlay keeps text readable */
+
+.card::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+
+  background: linear-gradient(
+    145deg,
+    rgb(0 0 0 / 15%),
+    rgb(0 0 0 / 65%)
+  );
+
+  opacity: 0;
+  transition: opacity 350ms ease;
+
+  content: "";
+  pointer-events: none;
+}
+
+/* ==========================================
+   CARD CONTENT
+========================================== */
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-width: 0;
+}
+
+/* ==========================================
+   ICON
+========================================== */
+
+.iconWrap {
+  display: grid;
+  place-items: center;
+
+  width: 58px;
+  height: 58px;
+
+  margin-bottom: 18px;
+
+  color: var(--lime);
+
+  filter: drop-shadow(
+    0 0 5px rgb(215 255 0 / 12%)
+  );
+
+  transition:
+    color 350ms ease,
+    transform 350ms ease,
+    filter 350ms ease;
+}
+
+.icon {
+  display: block;
+  width: 38px;
+  height: 38px;
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.card h3 {
+  margin: 0;
+
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.3px;
+
+  transition:
+    color 350ms ease,
+    letter-spacing 350ms ease;
+}
+
+/* ==========================================
+   LIME ACCENT
+========================================== */
+
+.cardAccent {
+  display: block;
+  flex: 0 0 3px;
+
+  width: 38px;
+  height: 3px;
+
+  margin: 13px 0;
+
+  background: var(--lime);
+
+  box-shadow: 0 0 6px rgb(215 255 0 / 20%);
+
+  transition:
+    width 350ms ease,
+    box-shadow 350ms ease;
+}
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.card p {
+  max-width: 210px;
+  margin: 0;
+
+  color: #c5c5c5;
+  font-size: 12px;
+  line-height: 1.6;
+
+  overflow-wrap: break-word;
+
+  transition:
+    color 350ms ease,
+    transform 350ms ease;
+}
+
+/* ==========================================
+   HOVER — DARK IMAGE + NEON GLOW
+========================================== */
+
+.card:hover {
+  z-index: 2;
+
+  border-color: var(--lime);
+
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 0 8px rgb(215 255 0 / 60%),
+    0 0 22px rgb(215 255 0 / 25%),
+    0 0 42px rgb(215 255 0 / 10%),
+    inset 0 0 24px rgb(215 255 0 / 4%);
+}
+
+.card:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+.card:hover .iconWrap {
+  color: var(--lime-soft);
+
+  transform: translateY(-3px) scale(1.1);
+
+  filter: drop-shadow(
+    0 0 9px rgb(215 255 0 / 80%)
+  );
+}
+
+.card:hover .cardAccent {
+  width: 55px;
+
+  box-shadow:
+    0 0 8px rgb(215 255 0 / 85%),
+    0 0 18px rgb(215 255 0 / 40%);
+}
+
+.card:hover h3 {
+  color: var(--lime-soft);
+  letter-spacing: 0.8px;
+}
+
+.card:hover p {
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Keyboard accessibility */
+
+.card:focus-within {
+  outline: 2px solid var(--lime);
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  margin-top: 42px;
+
+  color: #999;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.footerLine {
+  flex: 1;
+  height: 1px;
+  background: #393939;
+}
+
+/* ==========================================
+   LAPTOP / TABLET
+========================================== */
+
+@media (max-width: 1050px) {
+  .container {
+    width: calc(100% - 36px);
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .header {
+    margin-bottom: 36px;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+}
+
+/* ==========================================
+   MOBILE — TWO COLUMNS
+========================================== */
+
+@media (max-width: 650px) {
+  .section {
+    padding: 42px 0 28px;
+  }
+
+  .container {
+    width: calc(100% - 28px);
+  }
+
+  .eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.4px;
+  }
+
+  .header {
+    margin-bottom: 30px;
+  }
+
+  .header h2 {
+    font-size: clamp(30px, 8vw, 43px);
+    line-height: 1.05;
+    letter-spacing: -1px;
+  }
+
+  .header p {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .card {
+    padding: 15px;
+    border-radius: 4px;
+  }
+
+  .iconWrap {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 12px;
+  }
+
+  .icon {
+    width: 31px;
+    height: 31px;
+  }
+
+  .card h3 {
+    font-size: 11px;
+  }
+
+  .cardAccent {
+    width: 30px;
+    margin: 9px 0;
+  }
+
+  .card p {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+}
+
+/* ==========================================
+   SMALL PHONES
+========================================== */
+
+@media (max-width: 380px) {
+  .container {
+    width: calc(100% - 22px);
+  }
+
+  .grid {
+    gap: 9px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .iconWrap {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 9px;
+  }
+
+  .icon {
+    width: 27px;
+    height: 27px;
+  }
+
+  .card h3 {
+    font-size: 10px;
+  }
+
+  .cardAccent {
+    margin: 7px 0;
+  }
+
+  .card p {
+    font-size: 9px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card::before,
+  .card::after,
+  .iconWrap,
+  .cardAccent,
+  .card h3,
+  .card p {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .card:hover .iconWrap,
+  .card:hover p {
+    transform: none;
+  }
+}

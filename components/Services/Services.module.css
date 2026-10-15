@@ -1,0 +1,501 @@
+
+/* ========================================
+   LAVI’SH PERFORMANCE — SERVICES SECTION
+======================================== */
+
+.services {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 65px 5% 75px;
+  background: #ffffff;
+  color: #080808;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* ========================================
+   SECTION HEADER
+======================================== */
+
+.header {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto 45px;
+  padding: 0;
+  text-align: center;
+}
+
+.eyebrow {
+  display: block;
+  margin: 0 0 18px;
+  color: #666d64;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0 0 18px;
+  padding: 0;
+  color: #080808;
+  font-family: inherit;
+  font-size: clamp(25px, 2.5vw, 34px);
+  font-weight: 750;
+  line-height: 1.25;
+  letter-spacing: -0.8px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.title span {
+  color: #96b100;
+}
+
+.intro {
+  width: 100%;
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 0;
+  color: #555b55;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* ========================================
+   SERVICES GRID
+======================================== */
+
+.grid {
+  position: relative;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 26px;
+  row-gap: 24px;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========================================
+   SERVICE CARD
+======================================== */
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 260px;
+  margin: 0;
+  padding: 28px 26px;
+  border: 1px solid #e0e4da;
+  border-radius: 13px;
+  background: #ffffff;
+  color: #080808;
+  box-sizing: border-box;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Alternating neon-lime cards */
+
+.card:nth-child(even) {
+  border-color: #d7ff00;
+  background: #d7ff00;
+}
+
+/* Subtle hover effect */
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+}
+
+/* ========================================
+   CARD TITLE
+======================================== */
+
+.cardTitle {
+  margin: 0 0 14px;
+  padding: 0;
+  color: #080808;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.2px;
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   CARD DESCRIPTION
+======================================== */
+
+.cardDescription {
+  margin: 0 0 28px;
+  padding: 0;
+  color: #303030;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   MORE INFO — BLACK PILL BUTTON
+======================================== */
+/* ========================================
+   MORE INFO — COMPACT LIME PILL BUTTON
+======================================== */
+
+.moreButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  gap: 12px;
+
+  min-height: 34px;
+  margin-top: auto;
+  padding: 5px 14px;
+
+  border: 1px solid #d7ff38;
+  border-radius: 999px;
+  background: #15170d;
+  color: #e7e5e5;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Button text */
+
+.moreButton > span:first-child {
+  display: inline-block;
+  color: #b2b2b2;
+}
+
+/* Small circular arrow */
+
+.moreButtonCircle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 22px;
+
+  width: 22px;
+  height: 22px;
+
+  border: 1px solid #080808;
+  border-radius: 50%;
+  background: white;
+  color: #080808;
+  box-sizing: border-box;
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
+}
+
+/* Arrow */
+
+.moreButtonArrow {
+  display: block;
+  margin-top: -2px;
+  color: inherit;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* Hover */
+
+.moreButton:hover {
+  background: #c8ed00;
+  border-color: #c8ed00;
+  transform: translateY(-2px);
+}
+
+.moreButton:hover .moreButtonCircle {
+  transform: translateX(2px);
+  background: #ffffff;
+}
+
+/* Keyboard accessibility */
+
+.moreButton:focus-visible {
+  outline: 2px solid #96b100;
+  outline-offset: 3px;
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .moreButton,
+  .moreButtonCircle {
+    transition: none;
+  }
+
+  .moreButton:hover,
+  .moreButton:hover .moreButtonCircle {
+    transform: none;
+  }
+}
+/* ========================================
+   LARGE DESKTOP
+======================================== */
+
+@media (min-width: 1440px) {
+  .services {
+    padding-top: 75px;
+    padding-bottom: 85px;
+  }
+
+  .container {
+    max-width: 1300px;
+  }
+
+  .header {
+    margin-bottom: 50px;
+  }
+
+  .grid {
+    column-gap: 30px;
+    row-gap: 28px;
+  }
+
+  .card {
+    min-height: 285px;
+    padding: 30px;
+  }
+
+  .cardTitle {
+    font-size: 17px;
+  }
+
+  .cardDescription {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .moreButton {
+    gap: 20px;
+  }
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+  .services {
+    padding: 52px 4% 60px;
+  }
+
+  .header {
+    margin-bottom: 36px;
+  }
+
+  .title {
+    font-size: 27px;
+  }
+
+  .intro {
+    font-size: 14px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  .card {
+    min-height: 250px;
+    padding: 24px;
+  }
+
+  .cardTitle {
+    font-size: 16px;
+  }
+
+  .cardDescription {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .moreButton {
+    min-height: 46px;
+    gap: 15px;
+    padding-left: 17px;
+    font-size: 13px;
+  }
+
+  .moreButtonCircle {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+  }
+
+  .moreButtonArrow {
+    font-size: 29px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+  .services {
+    padding: 42px 20px 48px;
+  }
+
+  .header {
+    margin-bottom: 30px;
+  }
+
+  .eyebrow {
+    margin-bottom: 13px;
+    font-size: 10px;
+    letter-spacing: 1.7px;
+  }
+
+  .title {
+    margin-bottom: 14px;
+    font-size: 24px;
+    line-height: 1.35;
+    letter-spacing: -0.5px;
+  }
+
+  .intro {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .card {
+    min-height: 225px;
+    padding: 23px;
+    border-radius: 12px;
+  }
+
+  .cardTitle {
+    margin-bottom: 11px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .cardDescription {
+    margin-bottom: 24px;
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .moreButton {
+    min-height: 44px;
+    gap: 14px;
+    padding: 3px 4px 3px 17px;
+    font-size: 13px;
+  }
+
+  .moreButtonCircle {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+  }
+
+  .moreButtonArrow {
+    font-size: 28px;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 360px) {
+  .services {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .card {
+    min-height: 220px;
+    padding: 19px;
+  }
+
+  .moreButton {
+    gap: 12px;
+    padding-left: 15px;
+    font-size: 12px;
+  }
+
+  .moreButtonCircle {
+    width: 32px;
+    height: 32px;
+    flex-basis: 32px;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .moreButton,
+  .moreButton > span:first-child,
+  .moreButtonCircle {
+    transition: none;
+  }
+
+  .card:hover,
+  .moreButton:hover .moreButtonCircle {
+    transform: none;
+  }
+}

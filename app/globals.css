@@ -2985,3 +2985,54 @@ svg {
     font-size: 13px;
   }
 }
+
+/* ==========================================
+   FINAL FIX — ALIGN HEADER WITH HERO
+========================================== */
+
+/* Laptop and desktop: same centered container */
+header .nav,
+.hero-inner {
+  width: calc(100% - 64px) !important;
+  max-width: 1280px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box;
+}
+
+/* Large desktop */
+@media (min-width: 1440px) {
+  header .nav,
+  .hero-inner {
+    width: calc(100% - 80px) !important;
+    max-width: 1320px !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 761px) and (max-width: 1023px) {
+  header .nav,
+  .hero-inner {
+    width: calc(100% - 48px) !important;
+    max-width: 1280px !important;
+  }
+}
+
+/* Mobile: identical left and right alignment */
+@media (max-width: 760px) {
+  header .nav,
+  .hero-inner {
+    width: calc(100% - 44px) !important;
+    max-width: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+  header .nav,
+  .hero-inner {
+    width: calc(100% - 32px) !important;
+  }
+}

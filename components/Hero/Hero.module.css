@@ -367,3 +367,76 @@
     transform: none;
   }
 }
+
+
+/* ==========================================
+   HERO — SHARED CONTAINER ALIGNMENT
+========================================== */
+
+.heroContainer {
+  position: relative;
+  z-index: 3;
+
+  width: calc(100% - 64px);
+  max-width: 1280px;
+  margin-inline: auto;
+
+  box-sizing: border-box;
+}
+
+/* Content fills the container.
+   Control vertical spacing with padding only. */
+
+.heroInner {
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0;
+  margin: 0 !important;
+
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+
+  box-sizing: border-box;
+}
+
+/* Large desktop */
+
+@media (min-width: 1440px) {
+  .heroContainer {
+    width: calc(100% - 80px);
+    max-width: 1320px;
+  }
+}
+
+/* Tablet */
+
+@media (min-width: 761px) and (max-width: 1023px) {
+  .heroContainer {
+    width: calc(100% - 48px);
+    max-width: 1280px;
+  }
+}
+
+/* Mobile — align with the header navigation */
+
+@media (max-width: 760px) {
+  .heroContainer {
+    width: calc(100% - 44px);
+    max-width: none;
+  }
+
+  .heroInner {
+    width: 100% !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* Small phones */
+
+@media (max-width: 380px) {
+  .heroContainer {
+    width: calc(100% - 32px);
+  }
+}

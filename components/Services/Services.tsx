@@ -64,9 +64,7 @@ export default function Services() {
       <div className={styles.container}>
         {/* Section heading */}
         <header className={styles.header}>
-          <span className={styles.eyebrow}>
-            THE LAVI’SH METHOD
-          </span>
+          
 
           <h2 className={styles.title}>
             LAVI’SH PERFORMANCE <span>SERVICES</span>

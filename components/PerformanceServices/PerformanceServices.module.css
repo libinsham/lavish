@@ -1,0 +1,47 @@
+/* =====================================
+   SECTION 1 — PROGRAMS
+===================================== */
+
+.programs {
+  width: 100%;
+  padding: 80px 0 45px;
+  background: #fff;
+}
+
+/* =====================================
+   SECTION 2 — FEATURED TRAINING
+===================================== */
+
+.program-features {
+  width: 100%;
+  padding: 20px 0 85px;
+  background: #fff;
+}
+
+.program-features .feature-grid {
+  margin-top: 0;
+}
+
+/* Laptop and tablet */
+
+@media (max-width: 900px) {
+  .programs {
+    padding: 60px 0 35px;
+  }
+
+  .program-features {
+    padding: 20px 0 60px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 760px) {
+  .programs {
+    padding: 45px 0 25px;
+  }
+
+  .program-features {
+    padding: 15px 0 45px;
+  }
+}

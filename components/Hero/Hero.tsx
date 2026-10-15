@@ -71,7 +71,7 @@ export default function Hero() {
 
       <div className={styles.heroArt} aria-hidden="true">
        
-        <div className={styles.heroRibbon} />
+        
 
         <Image
           className={styles.heroAthlete}

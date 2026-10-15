@@ -178,9 +178,7 @@ export default function Header() {
             </div>
           </div>
 
-          <a href="#" onClick={close}>
-            Membership Plans
-          </a>
+     
             <a href="#" onClick={close}>
             Success Stories
           </a>
@@ -201,7 +199,7 @@ export default function Header() {
           {/* GET STARTED */}
 
           <a className="pill" href="/contact" onClick={close}>
-            Get Started
+                   Membership Plans
           </a>
         </nav>
       </div>

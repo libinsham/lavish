@@ -18,9 +18,9 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-
-<About />  <AppSection />
         <Services />
+
+ <AppSection />
 
       
 

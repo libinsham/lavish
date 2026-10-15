@@ -68,9 +68,12 @@ export default function Header() {
           className={`nav-links${open ? " open" : ""}`}
           aria-label="Main navigation"
         >
+
+          <a href="/" onClick={close}> Home </a>
           <a href="/about" onClick={close}>About</a>
-          <a href="/#programs" onClick={close}>Careers</a>
-          <a href="/#programs" onClick={close}>Academy</a>
+          <a href="#" onClick={close}> Offerings </a>
+          <a href="#" onClick={close}>Academy</a>
+                <a href="#" onClick={close}>Academy</a>
           <a className="pill" href="/contact" onClick={close}>Get Started</a>
         </nav>
       </div>

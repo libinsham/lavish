@@ -2077,15 +2077,15 @@ header {
   position: relative;
   overflow: hidden;
   padding: 75px 0 85px;
-  background: #050606;
-  color: #fff;
+  background: #fff;
+  color: #111111;
 }
 
 /* Heading */
 
 .trainer-section .trainer-title {
   margin: 0 auto 20px;
-  color: #d7ff38;
+  color: #96b100;
   font-size: clamp(28px, 3vw, 42px);
   font-weight: 750;
   line-height: 1.2;
@@ -2098,7 +2098,7 @@ header {
 .trainer-section .trainer-intro {
   max-width: 850px;
   margin: 0 auto 58px;
-  color: #d0d0d0;
+  color: #0b0a0a;
   font-size: 16px;
   line-height: 1.9;
   text-align: center;

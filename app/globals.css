@@ -2309,7 +2309,7 @@ header {
 
   width: calc(100% - 40px);
   max-width: 1280px;
-  margin: 0 auto 65px;
+  margin: 30px auto 65px;
   padding: 30px 36px;
 
   border: 1px solid #e8e8e8;

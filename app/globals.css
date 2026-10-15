@@ -2869,3 +2869,119 @@ svg {
     transition: none;
   }
 }
+
+
+/* ==========================================
+   LAVI'SH — FINAL MOBILE HERO FIX
+   Full-width buttons + larger artwork
+========================================== */
+
+@media (max-width: 760px) {
+  /* Keep hero content aligned with the heading */
+
+  .hero-inner {
+    display: block;
+    width: calc(100% - clamp(44px, 12vw, 70px));
+    max-width: none;
+    margin-inline: auto;
+  }
+
+  /* Give the artwork more room */
+
+  .hero-art {
+    right: -10%;
+    bottom: 0;
+    width: 120%;
+    height: 61%;
+    overflow: visible;
+  }
+
+  /* Increase the neon letter */
+
+  .hero-letter {
+    top: 1%;
+    right: 3%;
+    font-size: clamp(290px, 80vw, 460px);
+    line-height: 0.8;
+  }
+
+  /* Increase the athlete image */
+
+  .hero-athlete {
+    right: -5%;
+    bottom: 55px;
+
+    width: 115%;
+    max-width: none;
+    height: 115%;
+
+    object-fit: contain;
+    object-position: center bottom;
+    transform: none;
+  }
+
+  /* Stack both CTA buttons at full content width */
+
+  .hero-inner a.pill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 100%;
+    min-height: 58px;
+
+    margin: 12px 0 0;
+    padding: 8px 10px 8px 22px;
+
+    box-sizing: border-box;
+  }
+
+  .hero-inner a.pill + a.pill {
+    margin-top: 14px;
+  }
+
+  /* Keep button text readable */
+
+  .hero-inner a.pill > span:first-child {
+    min-width: 0;
+    text-align: left;
+  }
+
+  /* Keep circular arrow inside the wider button */
+
+  .hero-inner a.pill .button-arrow,
+  .hero-inner a.pill .buttonArrow {
+    flex-shrink: 0;
+  }
+}
+
+/* ==========================================
+   SMALL PHONES
+========================================== */
+
+@media (max-width: 380px) {
+  .hero-art {
+    right: -8%;
+    width: 116%;
+    height: 57%;
+  }
+
+  .hero-letter {
+    right: 2%;
+    font-size: clamp(245px, 74vw, 300px);
+  }
+
+  .hero-athlete {
+    right: -3%;
+    bottom: 48px;
+    width: 110%;
+    height: 110%;
+  }
+
+  .hero-inner a.pill {
+    min-height: 54px;
+    padding-left: 16px;
+    font-size: 13px;
+  }
+}

@@ -3,7 +3,7 @@ import Hero from "@/components/Hero/Hero";
 import Services from "@/components/Services/Services";
 import AppSection from "@/components/AppSection";
 
-import About from "@/components/About/About";
+
 import Trainers from "@/components/Trainers";
 
 import Programs from "@/components/Programs";
@@ -21,9 +21,7 @@ export default function Home() {
         <Services />
 
  <AppSection />
-
-      
-
+    
                 <Trainers />
         <Programs />
         <Testimonials />

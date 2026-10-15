@@ -73,7 +73,7 @@ export default function Header() {
           <a href="/about" onClick={close}>About</a>
           <a href="#" onClick={close}> Offerings </a>
           <a href="#" onClick={close}>Academy</a>
-                <a href="#" onClick={close}>Academy</a>
+                
           <a className="pill" href="/contact" onClick={close}>Get Started</a>
         </nav>
       </div>
